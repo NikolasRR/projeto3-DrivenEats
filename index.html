@@ -13,6 +13,7 @@
 </head>
 <body>
     
+    <!-- HEADER -->
     <header>
         <h1>DrivenEats</h1>
         <h2>Sua comida em 6 minutos</h2>
@@ -23,34 +24,38 @@
         <!-- ESCOLHA DO PRATO -->
         <h3>Primeiro, seu prato</h3>
 
-        <div>
+        <div class="pratos" data-identifier="dishes">
 
-                <div class="opcaodeprato">
+                <div class="opcaodocombo" data-identifier="food-option" onclick="selecionarOpcaoDeComida(this);">
                     <img src="pastel.jpg">
-                    <h4>Pastel de carne</h4>
+                    <h4 data-identifier="food-title">Pastel de carne</h4>
                     <p>Recheio de carne moída e queijo</p>
-                    <h5>R$ 9,90</h5>
+                    <h5 data-identifier="food-price">R$ 9,90</h5>
+                    <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div class="opcaodeprato">
+                <div class="opcaodocombo" data-identifier="food-option" onclick="selecionarOpcaoDeComida(this);">
                     <img src="pastel.jpg">
-                    <h4>Pastel de carne</h4>
+                    <h4 data-identifier="food-title">Pastel de carne</h4>
                     <p>Recheio de carne moída e queijo</p>
-                    <h5>R$ 9,90</h5>
+                    <h5 data-identifier="food-price">R$ 9,90</h5>
+                    <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div class="opcaodeprato">
+                <div class="opcaodocombo" data-identifier="food-option" onclick="selecionarOpcaoDeComida(this);">
                     <img src="pastel.jpg">
-                    <h4>Pastel de carne</h4>
+                    <h4 data-identifier="food-title">Pastel de carne</h4>
                     <p>Recheio de carne moída e queijo</p>
-                    <h5>R$ 9,90</h5>
+                    <h5 data-identifier="food-price">R$ 9,90</h5>
+                    <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div class="opcaodeprato">
+                <div class="opcaodocombo" data-identifier="food-option" onclick="selecionarOpcaoDeComida(this);">
                     <img src="pastel.jpg">
-                    <h4>Pastel de carne</h4>
+                    <h4 data-identifier="food-title">Pastel de carne</h4>
                     <p>Recheio de carne moída e queijo</p>
-                    <h5>R$ 9,90</h5>
+                    <h5 data-identifier="food-price">R$ 9,90</h5>
+                    <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
         </div>
@@ -58,34 +63,38 @@
         <!-- ESCOLHA DA BEBIDA -->
         <h3>Depois, sua bebida</h3>
 
-        <div>
+        <div class="bebidas" data-identifier="drinks">
 
-            <div class="opcaodeprato">
+            <div class="opcaodocombo" data-identifier="food-option" onclick="selecionarOpcaoDeBebida(this)">
                 <img src="pastel.jpg">
-                <h4>Pastel de carne</h4>
+                <h4 data-identifier="food-title">Pastel de carne</h4>
                 <p>Recheio de carne moída e queijo</p>
-                <h5>R$ 9,90</h5>
+                <h5 data-identifier="food-price">R$ 9,90</h5>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
 
-            <div class="opcaodeprato">
+            <div class="opcaodocombo" data-identifier="food-option" onclick="selecionarOpcaoDeBebida(this)">
                 <img src="pastel.jpg">
-                <h4>Pastel de carne</h4>
+                <h4 data-identifier="food-title">Pastel de carne</h4>
                 <p>Recheio de carne moída e queijo</p>
-                <h5>R$ 9,90</h5>
+                <h5 data-identifier="food-price">R$ 9,90</h5>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
 
-            <div class="opcaodeprato">
+            <div class="opcaodocombo" data-identifier="food-option" onclick="selecionarOpcaoDeBebida(this)">
                 <img src="pastel.jpg">
-                <h4>Pastel de carne</h4>
+                <h4 data-identifier="food-title">Pastel de carne</h4>
                 <p>Recheio de carne moída e queijo</p>
-                <h5>R$ 9,90</h5>
+                <h5 data-identifier="food-price">R$ 9,90</h5>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
 
-            <div class="opcaodeprato">
+            <div class="opcaodocombo" data-identifier="food-option" onclick="selecionarOpcaoDeBebida(this)">
                 <img src="pastel.jpg">
-                <h4>Pastel de carne</h4>
+                <h4 data-identifier="food-title">Pastel de carne</h4>
                 <p>Recheio de carne moída e queijo</p>
-                <h5>R$ 9,90</h5>
+                <h5 data-identifier="food-price">R$ 9,90</h5>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
 
         </div>
@@ -93,47 +102,64 @@
         <!-- ESCOLHA DA SOBREMESA -->
         <h3>Por fim, sua sobremesa</h3>
 
-        <div>
+        <div class="sobremesas" data-identifier="desserts">
 
-            <div class="opcaodeprato">
+            <div class="opcaodocombo" data-identifier="food-option" onclick="selecionarOpcaoDeSobremesas(this)">
                 <img src="pastel.jpg">
-                <h4>Pastel de carne</h4>
+                <h4 data-identifier="food-title">Pastel de carne</h4>
                 <p>Recheio de carne moída e queijo</p>
-                <h5>R$ 9,90</h5>
+                <h5 data-identifier="food-price">R$ 9,90</h5>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
 
-            <div class="opcaodeprato">
+            <div class="opcaodocombo" data-identifier="food-option" onclick="selecionarOpcaoDeSobremesas(this)">
                 <img src="pastel.jpg">
-                <h4>Pastel de carne</h4>
+                <h4 data-identifier="food-title">Pastel de carne</h4>
                 <p>Recheio de carne moída e queijo</p>
-                <h5>R$ 9,90</h5>
+                <h5 data-identifier="food-price">R$ 9,90</h5>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
 
-            <div class="opcaodeprato">
+            <div class="opcaodocombo" data-identifier="food-option" onclick="selecionarOpcaoDeSobremesas(this)">
                 <img src="pastel.jpg">
-                <h4>Pastel de carne</h4>
+                <h4 data-identifier="food-title">Pastel de carne</h4>
                 <p>Recheio de carne moída e queijo</p>
-                <h5>R$ 9,90</h5>
+                <h5 data-identifier="food-price">R$ 9,90</h5>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
 
-            <div class="opcaodeprato">
+            <div class="opcaodocombo" data-identifier="food-option" onclick="selecionarOpcaoDeSobremesas(this)">
                 <img src="pastel.jpg">
-                <h4>Pastel de carne</h4>
+                <h4 data-identifier="food-title">Pastel de carne</h4>
                 <p>Recheio de carne moída e queijo</p>
-                <h5>R$ 9,90</h5>
+                <h5 data-identifier="food-price">R$ 9,90</h5>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
 
         </div>
 
     </main>
 
+    <!-- FOOTER SEM SELECIONAR O COMBO COMPLETO-->
     <footer>
 
-        <div>
+        <button class="botaodesativado">
             <p>Selecione os 3 itens para fechar o pedido</p>
-        </div>
+        </button>
+
+        <!-- FOOTER COM O COMBO COMPLETO SELECIONADO -->
+        <button class="botaoativado escondido">
+            <p>Fechar pedido</p>
+        </button>
 
     </footer>
+
+    <!-- JAVA SCRIPT PARA INTERATIVIDADE DO SITE -->
+    <script src="script.js"></script>
+
+    <!-- JAVA SCRIPT PARA OS IONS-ICONS -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>
