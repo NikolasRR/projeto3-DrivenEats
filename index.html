@@ -24,7 +24,7 @@
         <!-- ESCOLHA DO PRATO -->
         <h3>Primeiro, seu prato</h3>
 
-        <div class="pratos" data-identifier="dishes">
+        <div class="pratos" data-identifier="dishes" >
 
                 <div class="opcaodocombo" data-identifier="food-option" onclick="selecionarOpcaoDeComida(this);">
                     <img src="pastel.jpg">
@@ -34,9 +34,10 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
+
                 <div class="opcaodocombo" data-identifier="food-option" onclick="selecionarOpcaoDeComida(this);">
                     <img src="pastel.jpg">
-                    <h4 data-identifier="food-title">Pastel de carne</h4>
+                    <h4 data-identifier="food-title">Pastel de camarao</h4>
                     <p>Recheio de carne moída e queijo</p>
                     <h5 data-identifier="food-price">R$ 9,90</h5>
                     <ion-icon name="checkmark-circle"></ion-icon>
@@ -44,7 +45,7 @@
 
                 <div class="opcaodocombo" data-identifier="food-option" onclick="selecionarOpcaoDeComida(this);">
                     <img src="pastel.jpg">
-                    <h4 data-identifier="food-title">Pastel de carne</h4>
+                    <h4 data-identifier="food-title">Pastel de 4 quejos</h4>
                     <p>Recheio de carne moída e queijo</p>
                     <h5 data-identifier="food-price">R$ 9,90</h5>
                     <ion-icon name="checkmark-circle"></ion-icon>
@@ -52,7 +53,7 @@
 
                 <div class="opcaodocombo" data-identifier="food-option" onclick="selecionarOpcaoDeComida(this);">
                     <img src="pastel.jpg">
-                    <h4 data-identifier="food-title">Pastel de carne</h4>
+                    <h4 data-identifier="food-title">Pastel de frango</h4>
                     <p>Recheio de carne moída e queijo</p>
                     <h5 data-identifier="food-price">R$ 9,90</h5>
                     <ion-icon name="checkmark-circle"></ion-icon>
@@ -140,15 +141,32 @@
 
     </main>
 
+    <!-- JANELA DE CONFIRMAÇÃO DO PEDIDO -->
+    <aside>
+
+        <div class="confirmarPedidoBackground escondido">
+            <div class="confirmarPedido" data-identifier="confirmation-dialog">
+                <h6>Confirme seu pedido</h6>
+                <div><p id="prato"></p><p id="precoPrato"></p></div>
+                <div><p id="bebida"></p><p id="precoBebida"></p></div>
+                <div><p id="sobremesa"></p><p id="precoSobremesa"></p></div>
+                <div class="negrito"><p id="total">TOTAL</p><p id="precoTotal"></p></div>
+                <button class="fecharPedido" onclick="enviarMensagemWhatsappRestaurante();">Tudo certo, pode pedir!</button>
+                <button class="cancelar" onclick="fecharJanelaDeConfirmarPedido();">Cancelar</button>
+            </div>
+        </div>
+
+    </aside>
+
     <!-- FOOTER SEM SELECIONAR O COMBO COMPLETO-->
     <footer>
 
-        <button class="botaodesativado">
+        <button class="botaodesativado" disabled>
             <p>Selecione os 3 itens para fechar o pedido</p>
         </button>
 
         <!-- FOOTER COM O COMBO COMPLETO SELECIONADO -->
-        <button class="botaoativado escondido">
+        <button class="botaoativado escondido" onclick="aparecerJanelaDeConfirmarPedido();">
             <p>Fechar pedido</p>
         </button>
 
