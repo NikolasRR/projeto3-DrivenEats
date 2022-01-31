@@ -93,8 +93,8 @@ function aparecerJanelaDeConfirmarPedido () {
 
     //RETIRO O R$ DAS STRINGS DOS PREÇOS DOS ITENS
     const precoComidaSemR$ = precoComidaSelecionadaTexto.replace("R$ ", "");
-    const precoBebidaSemR$ = precoComidaSelecionadaTexto.replace("R$ ", "");
-    const precoSobremesaSemR$ = precoComidaSelecionadaTexto.replace("R$ ", "");
+    const precoBebidaSemR$ = precoBebidaSelecionadaTexto.replace("R$ ", "");
+    const precoSobremesaSemR$ = precoSobremesaSelecionadaTexto.replace("R$ ", "");
 
     //TROCO O PONTO PELA VÍRGULA E TRANSFORMO EM FLOAT, A TROCA É NECESSÁRIA POIS O FLOAT NÃO ENTENDE VÍRGULA
     const precoComidaFloat = parseFloat(precoComidaSemR$.replace(",", "."));
@@ -111,7 +111,7 @@ function aparecerJanelaDeConfirmarPedido () {
     document.querySelector("#sobremesa").innerHTML = nomeSobremesaSelecionadaTexto;
     document.querySelector("#precoPrato").innerHTML = precoComidaSemR$;
     document.querySelector("#precoBebida").innerHTML = precoBebidaSemR$;
-    document.querySelector("#precoSobremesa").innerHTML = precoComidaSemR$;
+    document.querySelector("#precoSobremesa").innerHTML = precoSobremesaSemR$;
     document.querySelector("#precoTotal").innerHTML = "R$ " + precoTotalString;
     
     //RETIRO A CLASSE ESCONDIDO PARA QUE A JANELA ENFIM APAREÇA
@@ -146,8 +146,8 @@ function enviarMensagemWhatsappRestaurante () {
 
     //RETIRO O R$ DAS STRINGS DOS PREÇOS DAS COMIDAS
     const precoComidaSemR$ = precoComidaSelecionadaTexto.replace("R$ ", "");
-    const precoBebidaSemR$ = precoComidaSelecionadaTexto.replace("R$ ", "");
-    const precoSobremesaSemR$ = precoComidaSelecionadaTexto.replace("R$ ", "");
+    const precoBebidaSemR$ = precoBebidaSelecionadaTexto.replace("R$ ", "");
+    const precoSobremesaSemR$ = precoSobremesaSelecionadaTexto.replace("R$ ", "");
 
     //TROCO O PONTO PELA VÍRGULA E TRANSFORMO EM FLOAT, A TROCA É NECESSÁRIA POIS O FLOAT N ENTENDE VÍRGULA
     const precoComidaFloat = parseFloat(precoComidaSemR$.replace(",", "."));
@@ -163,7 +163,7 @@ function enviarMensagemWhatsappRestaurante () {
     const endereco = prompt("Por favor, informe seu endereço");
 
     //CRIO A MENSAGEM INSERINDO OS ITENS SELECIONADOS, VALOR TOTAL, NOME E ENDEREÇO. NÃO CONSIGO QUEBRAR A LINHA
-    let mensagemParaORestaurante = `Olá, gostaria de fazer o pedido:/n-Prato: ${nomeComidaSelecionadaTexto}/n-Bebida: ${nomeBebidaSelecionadaTexto}/n-Sobremesa: ${nomeSobremesaSelecionadaTexto}/nTOTAL: R$ ${precoTotalString}/n/nNome: ${nome}/nEndereço: ${endereco}`;
+    let mensagemParaORestaurante = `Olá, gostaria de fazer o pedido:/n-Prato: ${nomeComidaSelecionadaTexto}\n-Bebida: ${nomeBebidaSelecionadaTexto}\n-Sobremesa: ${nomeSobremesaSelecionadaTexto}\nTOTAL: R$ ${precoTotalString}\n\nNome: ${nome}\nEndereço: ${endereco}`;
     
     //COLOCO A MENSAGEM NO FORMATO QUE O WHATSAPP ACEITA
     let mensagemFormatada = encodeURIComponent(mensagemParaORestaurante);
