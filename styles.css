@@ -31,6 +31,7 @@ header h2 {
 main img {
     width: 144px;
     height: 87px;
+    object-fit: cover;
     margin: 18px 0 0 14px;
     border-radius: 4px;
 }

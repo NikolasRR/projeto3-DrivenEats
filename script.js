@@ -163,7 +163,7 @@ function enviarMensagemWhatsappRestaurante () {
     const endereco = prompt("Por favor, informe seu endereço");
 
     //CRIO A MENSAGEM INSERINDO OS ITENS SELECIONADOS, VALOR TOTAL, NOME E ENDEREÇO. NÃO CONSIGO QUEBRAR A LINHA
-    let mensagemParaORestaurante = `Olá, gostaria de fazer o pedido:/n-Prato: ${nomeComidaSelecionadaTexto}\n-Bebida: ${nomeBebidaSelecionadaTexto}\n-Sobremesa: ${nomeSobremesaSelecionadaTexto}\nTOTAL: R$ ${precoTotalString}\n\nNome: ${nome}\nEndereço: ${endereco}`;
+    let mensagemParaORestaurante = `Olá, gostaria de fazer o pedido:\n-Prato: ${nomeComidaSelecionadaTexto}\n-Bebida: ${nomeBebidaSelecionadaTexto}\n-Sobremesa: ${nomeSobremesaSelecionadaTexto}\nTOTAL: R$ ${precoTotalString}\n\nNome: ${nome}\nEndereço: ${endereco}`;
     
     //COLOCO A MENSAGEM NO FORMATO QUE O WHATSAPP ACEITA
     let mensagemFormatada = encodeURIComponent(mensagemParaORestaurante);
